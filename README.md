@@ -1,4 +1,4 @@
-#Svelte starter kit
+# Svelte starter kit
 
 Svelte starter kit — router, state management and testing included.
 
@@ -9,6 +9,8 @@ Requires Node.js 8.4.0+
 npm i
 npm run dev
 ```
+
+Open [http://localhost:9000](http://localhost:9000)
 
 Run tests in a separate console
 ```bash
