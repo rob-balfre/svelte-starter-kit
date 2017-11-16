@@ -4,9 +4,9 @@
   "description": "Svelte starter kit — router, state management and testing included.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack-config/webpack.config.dev.js",
-    "test": "webpack --config webpack-config/webpack.config.test.js --watch",
-    "build": "webpack --config webpack-config/webpack.config.build.js --display-error-details"
+    "dev": "webpack-dev-server --config webpack.config/webpack.config.dev.js",
+    "test": "webpack --config webpack.config/webpack.config.test.js --watch",
+    "build": "webpack --config webpack.config/webpack.config.build.js --display-error-details"
   },
   "repository": {
     "type": "git",
