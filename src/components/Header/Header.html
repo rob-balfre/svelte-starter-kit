@@ -1,0 +1,20 @@
+<h1>{{ salutation }}, counted to {{ count }} already!</h1>
+
+<script>
+  import {connect, getActions} from 'redux-zero/svelte';
+  import store from "../../state/store";
+  import { hello } from '../../helpers';
+
+  const mapToProps = ({username, count}) => ({username, count});
+
+  export default {
+    computed: {
+      salutation(username) {
+        return hello(username);
+      }
+    },
+    oncreate() {
+      connect(this, store, mapToProps);
+    }
+  };
+</script>
