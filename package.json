@@ -8,6 +8,11 @@
     "test": "webpack --config webpack-config/webpack.config.test.js --watch",
     "build": "webpack --config webpack-config/webpack.config.build.js --display-error-details"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rob-balfre/svelte-starter-kit.git"
+  },
+  "author": "rob-balfre",
   "license": "WTFPL",
   "devDependencies": {
     "babel-core": "^6.18.2",
