@@ -17,6 +17,10 @@ Run tests in a separate console
 npm run test
 ```
 
+### State Management
+* [redux-zero](https://github.com/concretesolutions/redux-zero)
+* [svelte example](https://github.com/concretesolutions/redux-zero/tree/master/examples/svelte/counter)
+
 #### Router docs
 * [abstract-state-router](https://github.com/TehShrike/abstract-state-router)
 * [svelte-state-renderer](https://github.com/TehShrike/svelte-state-renderer)
