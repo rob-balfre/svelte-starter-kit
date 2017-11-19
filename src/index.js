@@ -8,4 +8,4 @@ stateRouter.setMaxListeners(20);
 
 routes(stateRouter);
 
-stateRouter.evaluateCurrentRoute('counter');
+stateRouter.evaluateCurrentRoute('home');

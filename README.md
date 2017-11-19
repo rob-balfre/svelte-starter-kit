@@ -28,8 +28,10 @@ npm run test
 
 ### Testing
 * [Tape](https://github.com/substack/tape)
+* [Svelte example](https://github.com/saibotsivad/svelte-panel-click/blob/master/test.js)
  
 ### IDE Support
 WebStorm IDE has some quirks with Svelte handlebar syntax. To fix update these settings:
-* Preferences > Disable XML in inspections
-* Preferences > Disable Unknown html tag attribute
+* Preferences > Inspections > Disable all XML inspections
+* Preferences > Inspections > Disable Unknown HTML tag attribute
+* Preferences > Inspections >  Disable HTML file reference problems
