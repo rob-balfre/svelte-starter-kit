@@ -6,6 +6,7 @@ Svelte starter kit — router, state management and testing included.
 Requires Node.js 8.4.0+ 
 
 ```bash
+npx degit rob-balfre/svelte-starter-kit my-project
 npm i
 npm run dev
 ```
@@ -19,12 +20,12 @@ npm run test
 
 ### State Management
 * [redux-zero](https://github.com/concretesolutions/redux-zero)
-* [svelte example](https://github.com/concretesolutions/redux-zero/tree/master/examples/svelte/counter)
+* [Svelte example](https://github.com/concretesolutions/redux-zero/tree/master/examples/svelte/counter)
 
 ### Router
 * [abstract-state-router](https://github.com/TehShrike/abstract-state-router)
 * [svelte-state-renderer](https://github.com/TehShrike/svelte-state-renderer)
-* [svelte example](https://github.com/TehShrike/state-router-example/tree/efa9f57c4bf436c2379d7aa562874699a6e82a8a/implementations/svelte)
+* [Svelte example](https://github.com/TehShrike/state-router-example/tree/efa9f57c4bf436c2379d7aa562874699a6e82a8a/implementations/svelte)
 
 ### Testing
 * [Tape](https://github.com/substack/tape)
