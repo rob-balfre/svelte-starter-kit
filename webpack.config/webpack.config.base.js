@@ -27,7 +27,12 @@ module.exports = {
       {
         test: /\.html$/,
         exclude: /node_modules/,
-        use: 'svelte-loader'
+        use: [{
+          loader: 'svelte-loader',
+          options: {
+            store: true
+          }
+        }]
       },
       {
         test: /\.(png|jp(e*)g|svg)$/,

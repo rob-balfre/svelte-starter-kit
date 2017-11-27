@@ -1,5 +1,5 @@
-import Counter from '../../components/Counter/Counter.html';
-import Home from '../../components/Home/Home.html';
+import Counter from '../components/Counter/Counter.html';
+import Home from '../components/Home/Home.html';
 
 export default function (stateRouter) {
   stateRouter.addState({

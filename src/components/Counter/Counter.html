@@ -1,27 +1,13 @@
 <Header />
 
-<p>Count: {{count}}</p>
-<button id="increment" on:click="increment(event)" class="button">+</button>
-<button id="decrement" on:click="decrement(event)" class="button">-</button>
+<p>Count: {{ $count }}</p>
+<button id="increment" on:click="store.increment(event)" class="button">+</button>
+<button id="decrement" on:click="store.decrement(event)" class="button">-</button>
 
 <script>
-  import {connect, getActions} from 'redux-zero/svelte';
-
   import Header from '../Header/Header.html';
-  import store from "../../state/store";
-  import {actions} from "../../state/actions/actions";
-
-  const mapToProps = ({count}) => ({count});
-  const {decrement, increment} = getActions(store, actions);
 
   export default {
-    methods: {
-      decrement,
-      increment,
-    },
-    oncreate() {
-      connect(this, store, mapToProps);
-    },
     components: {
       Header
     }
