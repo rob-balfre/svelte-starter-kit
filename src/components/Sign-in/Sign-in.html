@@ -1,0 +1,25 @@
+<p>Any user/password combo works...</p>
+<form on:submit='handleSubmit(event)'>
+    <input type='text' placeholder='username' bind:value='formData.username'>
+    <input type='password' placeholder='password' bind:value='formData.password'>
+    <button type='submit'>Sign in</button>
+</form>
+
+<script>
+  import roadtrip from 'roadtrip';
+
+  export default {
+    data: function () {
+      return {
+        formData: {username: '', password: ''}
+      }
+    },
+    methods: {
+      handleSubmit: function (event) {
+        event.preventDefault();
+        sessionStorage.setItem('signedIn', true);
+        roadtrip.goto('/dashboard');
+      }
+    }
+  }
+</script>

@@ -1,12 +1,10 @@
-import StateRouter from 'abstract-state-router';
-import SvelteRenderer from 'svelte-state-renderer';
-import routes from './routes/';
-import store  from './store';
+import store from './store';
+import App from './components/App/App.html';
+import routes from './routes';
 
-const stateRouter = StateRouter(SvelteRenderer({ store }), document.querySelector('body'));
+const app = new App({
+  target: document.querySelector('main'),
+  store
+});
 
-stateRouter.setMaxListeners(20);
-
-routes(stateRouter);
-
-stateRouter.evaluateCurrentRoute('home');
+routes();

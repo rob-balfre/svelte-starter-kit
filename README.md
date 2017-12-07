@@ -19,7 +19,7 @@ To run unit tests open a separate console
 npm run unit-test
 ```
 
-End-to-end tests are powered by [cypress](https://www.cypress.io/)
+End-to-end tests are powered by [cypress](https://www.cypress.io/) (remember to also run the dev server).
 ```bash
 npm run e2e-test
 ```
@@ -29,8 +29,7 @@ npm run e2e-test
 * [Example](https://github.com/rob-balfre/svelte-starter-kit/tree/master/src/store/index.js)
 
 ### Router
-* [abstract-state-router](https://github.com/TehShrike/abstract-state-router)
-* [svelte-state-renderer](https://github.com/TehShrike/svelte-state-renderer)
+* [Roadtrip](https://github.com/Rich-Harris/roadtrip)
 * [Example](https://github.com/rob-balfre/svelte-starter-kit/tree/master/src/routes/index.js)
 
 ### Unit Testing

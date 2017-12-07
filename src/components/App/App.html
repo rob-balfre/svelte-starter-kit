@@ -1,0 +1,41 @@
+<nav>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/dashboard">Dashboard</a></li>
+        <li><a href="/counter">Counter</a></li>
+        <li><a href="/sign-in">Sign In</a></li>
+    </ul>
+</nav>
+
+{{#if $routePath === 'home' }}
+<Home></Home>
+{{/if}}
+
+{{#if $routePath === 'dashboard' }}
+<Dashboard></Dashboard>
+{{/if}}
+
+{{#if $routePath === 'counter' }}
+<Counter></Counter>
+{{/if}}
+
+{{#if $routePath === 'sign-in' }}
+<SignIn></SignIn>
+{{/if}}
+
+
+<script>
+  import Home from '../Home/Home.html';
+  import Counter from '../Counter/Counter.html';
+  import SignIn from '../Sign-in/Sign-in.html';
+  import Dashboard from '../Dashboard/Dashboard.html';
+
+  export default {
+    components: {
+      Home,
+      Counter,
+      SignIn,
+      Dashboard
+    }
+  }
+</script>

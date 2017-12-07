@@ -11,6 +11,12 @@ const test = (description, fn) => tape(description, t => {
   }
 });
 
+function createStore(state) {
+  class AppState extends Store {}
+  Object.assign(AppState.prototype, methods);
+  return new AppState(state);
+}
+
 test(`Should increase count by 1`, t => {
   t.timeoutAfter(1000);
   t.plan(1);
@@ -19,10 +25,7 @@ test(`Should increase count by 1`, t => {
     count: 0
   };
 
-  class AppState extends Store {}
-  Object.assign(AppState.prototype, methods);
-  const store = new AppState(state);
-
+  const store = createStore(state);
   store.increment();
   t.equal(store.get('count'), 1);
   t.end();
@@ -36,10 +39,7 @@ test(`Should decrease count by 1`, t => {
     count: 0
   };
 
-  class AppState extends Store {}
-  Object.assign(AppState.prototype, methods);
-  const store = new AppState(state);
-
+  const store = createStore(state);
   store.decrement();
   t.equal(store.get('count'), -1);
   t.end();

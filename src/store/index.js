@@ -2,6 +2,7 @@ import { Store } from 'svelte/store.js';
 import methods from './methods';
 
 const initialState = {
+  routePath: '',
   count: 0,
   username: 'Derek'
 };

@@ -1,6 +1,6 @@
 describe('Counter component', () => {
   beforeEach(() => {
-    cy.visit('/#/counter')
+    cy.visit('/counter')
   });
 
   it('renders text "Count"', () => {

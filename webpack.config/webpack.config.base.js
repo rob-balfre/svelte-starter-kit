@@ -1,5 +1,6 @@
 const path = require('path');
 const {readFileSync} = require('fs');
+
 const babelSettings = JSON.parse(readFileSync(__dirname + '/../.babelrc'));
 
 module.exports = {
@@ -26,7 +27,6 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        exclude: /node_modules/,
         use: [{
           loader: 'svelte-loader',
           options: {
