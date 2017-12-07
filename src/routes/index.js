@@ -14,6 +14,12 @@ function setParams(key, val) {
   })
 }
 
+function authCheck() {
+  if (!checkUserActive()) {
+    roadtrip.goto('/sign-in');
+  }
+}
+
 const routes = () => {
   roadtrip
     .add('/', {
@@ -36,16 +42,14 @@ const routes = () => {
 
     .add('/dashboard', {
       enter: function (route, previousRoute) {
-        if (checkUserActive()) {
-          setRoute('dashboard');
-        } else {
-          roadtrip.goto( '/sign-in' );
-        }
+        authCheck();
+        setRoute('dashboard');
       }
     })
 
     .add('/dashboard/user/:id', {
       enter: function (route, previousRoute) {
+        authCheck();
         setRoute('dashboard');
         setParams('UserId', route.params.id);
       },
