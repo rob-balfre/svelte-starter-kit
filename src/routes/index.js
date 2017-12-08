@@ -8,7 +8,7 @@ function setRoute(routeName) {
   });
 }
 
-function setParams(key, val) {
+function setParam(key, val) {
   store.set({
     ['routeParam' + key]: val
   })
@@ -41,20 +41,24 @@ const routes = () => {
     })
 
     .add('/dashboard', {
-      enter: function (route, previousRoute) {
+      beforeenter: function (route) {
         authCheck();
+      },
+      enter: function (route, previousRoute) {
         setRoute('dashboard');
       }
     })
 
     .add('/dashboard/user/:id', {
-      enter: function (route, previousRoute) {
+      beforeenter: function (route) {
         authCheck();
+      },
+      enter: function (route, previousRoute) {
         setRoute('dashboard');
-        setParams('UserId', route.params.id);
+        setParam('UserId', route.params.id);
       },
       update: function (route) {
-        setParams('UserId', route.params.id);
+        setParam('UserId', route.params.id);
       },
     })
 

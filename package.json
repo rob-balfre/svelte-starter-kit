@@ -4,10 +4,10 @@
   "description": "Svelte starter kit — router, state management and testing included.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --config webpack.config/webpack.config.dev.js --open",
+    "dev": "node build-scripts/copy-assets.js && webpack-dev-server --config webpack.config/webpack.config.dev.js --open",
     "unit-test": "webpack --config webpack.config/webpack.config.test.js --watch",
     "e2e-test": "node_modules/.bin/cypress open",
-    "build": "webpack --config webpack.config/webpack.config.build.js --display-error-details"
+    "build": "node build-scripts/copy-assets.js && webpack --config webpack.config/webpack.config.build.js --display-error-details"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,11 @@
     "babel-core": "^6.18.2",
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.18.0",
+    "chalk": "^2.3.0",
+    "cpy-cli": "^1.0.1",
     "cypress": "^1.1.2",
     "glob": "^7.1.2",
+    "shelljs": "^0.7.8",
     "svelte-loader": "2.1.0",
     "tap-spec": "^4.1.1",
     "tape": "^4.8.0",
